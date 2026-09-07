@@ -1,0 +1,88 @@
+/*kommentaar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: lightblue; /*teksti värv*/
+    background: transparent;/*tausta värv*/
+}
+header{
+    padding: 5%;
+    background-color: darkblue;
+    border-left: 3px solid lightblue;
+    border-bottom: 3px dotted lightblue;
+    border-radius: 0 0 0 60px;
+    background-image: url("Pilt.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+footer{
+    padding: 5%;
+    background-color: darkblue;
+    border-left: 3px solid lightblue;
+    border-top: 3px dotted lightblue;
+    border-radius: 60px 0 0 0;
+}
+section#osa1{
+    padding: 10%;
+    border-right:   9px groove orange;
+    border-bottom: 9px dotted orange;
+    margin: 10px;
+    width: 25%;
+}
+section#osa2{
+    padding: 5%;
+    border-left:  7px outset pink;
+    border-right:  7px outset pink;
+    margin: 5px;
+    width: 50%;
+}
+section#osa3{
+    padding: 5%;
+    border-bottom: 15px double brown;
+    margin: 5px;
+    width: 10%;
+}
+section#osa4{
+    padding: 5%;
+    border-right: 10px dashed green;
+    border-bottom: 10px double lightblue;
+    margin: 10px;
+    width: 15%;
+}
+section#osa5{
+     padding: 5%;
+     border-left: 5px dotted dodgerblue;
+     margin: 5px;
+     width: 15%;
+ }
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid lightblue;
+}
+/*navigeerimis menüü*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: dimgray;
+    text-decoration: none; /*link on alljooneta*/
+    text-align: center; /*teksti joondamine keskel*/
+    padding: 10px;
+    border-left: 3px solid lightblue;
+    border-radius: 20%;
+}
+nav{
+    padding: 5%;
+    margin-bottom: 5px;
+}
+nav ul li a:hover {
+    background-color: lightblue;
+}
