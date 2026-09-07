@@ -55,7 +55,7 @@ section#osa5{
      margin: 5px;
      width: 15%;
  }
-img{
+img#erapilt{
     width: 100%;
     border-radius: 50%;
     border: 10px solid lightblue;
@@ -85,4 +85,21 @@ nav{
 }
 nav ul li a:hover {
     background-color: lightblue;
+}
+#suurkast{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#pildigalerii{
+    border: 3px solid lightblue;
+}
+#video {
+
+}
+#muusika{
+
+}
+#kaart{
+
 }
