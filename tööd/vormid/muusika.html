@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika küsimustik</title>
+    <script src="../js/muusikaScript.js"></script>
+</head>
+
+<body>
+<h1>Muusika küsimustik</h1>
+
+<form action="#">
+    <table border="1">
+
+        <tr>
+            <td>
+                <!-- arvud - number -->
+                <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
+            </td>
+
+            <td>
+                <input type="number" min="0" max="24" step="1" value="6" id="tund" oninput="muusikaLugemine()">
+            </td>
+
+            <td>
+                <div id="vastus"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Kas sa kuulad raadiot?</label>
+            </td>
+
+            <td>
+                <!-- radionupp - ainult üks valik -->
+                <input type="radio" name="raadio" id="jah" value="jah" onclick="raadioValik()">
+                <label for="jah">jah</label>
+
+                <br>
+
+                <input type="radio" name="raadio" id="ei" value="ei" onclick="raadioValik()">
+                <label for="ei">ei</label>
+            </td>
+
+            <td>
+                <div id="vastus2"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <!-- checkbox - mitu valikut korraga -->
+                <label>Milliseid muusikuid/ansambleid sa tead?</label>
+            </td>
+
+            <td>
+                <input type="checkbox" name="muusik" id="noep" value="NOËP" onchange="muusikValik()">
+                <label for="noep">NOËP</label>
+
+                <br>
+
+                <input type="checkbox" name="muusik" id="nublu" value="nublu" onchange="muusikValik()">
+                <label for="nublu">nublu</label>
+
+                <br>
+
+                <input type="checkbox" name="muusik" id="tommy" value="Tommy Cash" onchange="muusikValik()">
+                <label for="tommy">Tommy Cash</label>
+            </td>
+
+            <td>
+                <div id="vastus3"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
+            </td>
+
+            <td>
+                <input type="button" value="Näita andmed" onclick="tervitus()">
+            </td>
+
+            <td>
+                <div id="vastus4"></div>
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
