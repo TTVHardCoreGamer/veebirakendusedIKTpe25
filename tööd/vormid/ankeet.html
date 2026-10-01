@@ -9,6 +9,7 @@
 <h1>Sportlase ankeet</h1>
 <form action="#">
     <table border="1">
+
         <tr>
             <td>
                 <!-- tekstikast -->
@@ -18,11 +19,10 @@
                 <input type="text" id="nimi" oninput="nimiLugemine()">
             </td>
             <td>
-                <div id="vastus">
-
-                </div>
+                <div id="vastus"></div>
             </td>
         </tr>
+
         <tr>
             <td>
                 <strong>Vali sugu:</strong>
@@ -32,9 +32,11 @@
                 <input type="radio" name="sugu" id="naine" value="naine" onclick="suguValik()">
                 <label for="naine">naine</label>
                 <br>
+
                 <input type="radio" name="sugu" id="mees" value="mees" onclick="suguValik()">
                 <label for="mees">mees</label>
                 <br>
+
                 <input type="radio" name="sugu" id="muu" value="muu" onclick="suguValik()">
                 <label for="muu">muu</label>
             </td>
@@ -42,49 +44,60 @@
                 <div id="vastus2"></div>
             </td>
         </tr>
+
         <tr>
             <td colspan="2">
                 <!-- checkbox - mitu valikut korraga -->
                 <fieldset>
-                    <legend>    <strong>Spordialad</strong> </legend>
+                    <legend><strong>Spordialad</strong></legend>
+
                     <input type="checkbox" name="spordiala" id="jooksmine" value="jooksmine" onchange="sportValik()">
                     <label for="jooksmine">jooksmine</label>
                     <br>
+
                     <input type="checkbox" name="spordiala" id="ujumine" value="ujumine" onchange="sportValik()">
                     <label for="ujumine">ujumine</label>
                     <br>
+
                     <input type="checkbox" name="spordiala" id="uisutamine" value="uisutamine" onchange="sportValik()">
                     <label for="uisutamine">uisutamine</label>
                     <br>
+
                     <input type="checkbox" name="spordiala" id="suusatamine" value="suusatamine" onchange="sportValik()">
                     <label for="suusatamine">suusatamine</label>
                     <br>
+
                     <input type="checkbox" name="spordiala" id="poks" value="poks" onchange="sportValik()">
                     <label for="poks">poks</label>
                 </fieldset>
+            </td>
 
-                <td>
-            <div id="vastus3"></div>
-        </td>
-
+            <td>
+                <div id="vastus3"></div>
             </td>
         </tr>
+
         <tr>
             <td>
-                <!-- arvud -number -->
                 <label for="tund">Mitu tundi nädalas sina treenid?</label>
             </td>
             <td>
-                <input type="number" min="0" max="24" step="1" value="6" id="tund">
+                <input
+                        type="number" min="0" max="24" step="1" value="6" id="tund" onchange="tundValik()">
+            </td>
+            <td>
+                <div id="vastus8"></div>
             </td>
         </tr>
+
+
         <tr>
             <td>
-                <!-- rippmenüü -dropdownlist -->
+                <!-- rippmenüü - dropdownlist -->
                 <label for="klubi">Mis klubi sa külastad?</label>
             </td>
             <td>
-                <select name="klubi" id="klubi">
+                <select name="klubi" id="klubi" onchange="klubiValik()">
                     <option value="vali">vali...</option>
                     <option value="gym">GYM</option>
                     <option value="myfitness">myFitness</option>
@@ -92,35 +105,58 @@
                     <option value="kalevspa">KalevSPA</option>
                 </select>
             </td>
+            <td>
+                <div id="vastus5"></div>
+            </td>
         </tr>
+
         <tr>
             <td>
-                <label for="varv"> Mis värvi tossud sul on?</label>
+                <label for="varv">Mis värvi tossud sul on?</label>
             </td>
             <td>
                 <input type="color" id="varv">
             </td>
         </tr>
+
         <tr>
             <td>
                 <label for="kuupaev">Millal oli su viimane trenn?</label>
             </td>
             <td>
-                <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31">
+                <input type="date" id="kuupaev"
+                       min="2026-01-01"
+                       max="2026-12-31"
+                       onchange="kuupaevValik()">
+            </td>
+            <td>
+                <div id="vastus6"></div>
             </td>
         </tr>
-        <tr>
-            Kasuta w3schools ja proovi ise input type=tel, file, password, vali ise 5 erineva tk
-        </tr>
+
         <tr>
             <td>
-                <input type="reset" value="Puhasta" onclick="puhasta()">"
+                <label for="kogemus">Mitu aastat oled sporti teinud?</label>
+            </td>
+            <td>
+                <input type="range" id="kogemus"
+                       min="0" max="20" value="5"
+                       oninput="rangeValik()">
+            </td>
+            <td>
+                <div id="vastus7"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
             </td>
             <td>
                 <input type="button" value="Näita andmed" onclick="tervitus()">
             </td>
             <td>
-               <div id="vastus4"></div>
+                <div id="vastus4"></div>
             </td>
         </tr>
 

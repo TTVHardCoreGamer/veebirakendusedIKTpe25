@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="et">
+
 <head>
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
@@ -7,6 +8,7 @@
 </head>
 
 <body>
+
 <h1>Muusika küsimustik</h1>
 
 <form action="#">
@@ -14,12 +16,11 @@
 
         <tr>
             <td>
-                <!-- arvud - number -->
                 <label for="tund">Mitu tundi päevas sa kuulad muusikat?</label>
             </td>
 
             <td>
-                <input type="number" min="0" max="24" step="1" value="6" id="tund" oninput="muusikaLugemine()">
+                <input type="range" min="0" max="24" step="1" value="6" id="tund" oninput="muusikaLugemine()">
             </td>
 
             <td>
@@ -27,13 +28,13 @@
             </td>
         </tr>
 
+
         <tr>
             <td>
                 <label>Kas sa kuulad raadiot?</label>
             </td>
 
             <td>
-                <!-- radionupp - ainult üks valik -->
                 <input type="radio" name="raadio" id="jah" value="jah" onclick="raadioValik()">
                 <label for="jah">jah</label>
 
@@ -48,9 +49,9 @@
             </td>
         </tr>
 
+
         <tr>
             <td>
-                <!-- checkbox - mitu valikut korraga -->
                 <label>Milliseid muusikuid/ansambleid sa tead?</label>
             </td>
 
@@ -73,6 +74,48 @@
                 <div id="vastus3"></div>
             </td>
         </tr>
+
+
+        <tr>
+            <td>
+                <label>Millist muusikat sa kõige rohkem kuulad?</label>
+            </td>
+
+            <td>
+                <input type="radio" name="stiil" id="pop" value="Pop" onclick="stiiliValik()">
+                <label for="pop">Pop</label>
+
+                <br>
+
+                <input type="radio" name="stiil" id="rock" value="Rock" onclick="stiiliValik()">
+                <label for="rock">Rock</label>
+
+                <br>
+
+                <input type="radio" name="stiil" id="rap" value="Rap" onclick="stiiliValik()">
+                <label for="rap">Rap</label>
+
+                <br>
+
+                <input type="radio" name="stiil" id="jazz" value="Jazz" onclick="stiiliValik()">
+                <label for="jazz">Jazz</label>
+
+                <br>
+
+                <input type="radio" name="stiil" id="klassika" value="Klassika" onclick="stiiliValik()">
+                <label for="klassika">Klassika</label>
+
+                <br>
+
+                <input type="radio" name="stiil" id="elektrooniline" value="Elektrooniline" onclick="stiiliValik()">
+                <label for="elektrooniline">Elektrooniline</label>
+            </td>
+
+            <td>
+                <div id="vastus5"></div>
+            </td>
+        </tr>
+
 
         <tr>
             <td>
