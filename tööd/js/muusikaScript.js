@@ -8,19 +8,21 @@ function muusikaLugemine(){
     return tund.value;
 }
 
-
 function raadioValik(){
     let vastus2=document.getElementById("vastus2");
     let jah=document.getElementById("jah");
     let ei=document.getElementById("ei");
+    let raadioPilt=document.getElementById("raadioPilt");
 
     let raadio="";
 
     if(jah.checked){
         raadio=jah.value;
+        raadioPilt.src="../pildid/jah.png";
     }
     else if(ei.checked){
         raadio=ei.value;
+        raadioPilt.src="../pildid/ei.png";
     }
     else{
         raadio="ühtegi ei valitud";
@@ -31,6 +33,7 @@ function raadioValik(){
 
     return raadio;
 }
+
 
 
 function muusikValik(){
@@ -104,6 +107,14 @@ function stiiliValik(){
 }
 
 
+function arvamuseValik(){
+    let arvamus=document.getElementById("arvamus");
+    let vastus6=document.getElementById("vastus6");
+
+    vastus6.innerHTML="Sinu arvamus: " +arvamus.value;
+}
+
+
 function tervitus(){
     let vastus4=document.getElementById("vastus4");
 
@@ -111,11 +122,13 @@ function tervitus(){
     let raadio=raadioValik();
     let muusikud=muusikValik();
     let stiil=stiiliValik();
+    let arvamus=document.getElementById("arvamus").value;
 
     vastus4.innerHTML='Muusika kuulamise aeg: '+tund+' tundi päevas<br>'
         +'Raadio kuulamine: '+raadio+'<br>'
         +'Sinu valitud muusikud: '+muusikud+'<br>'
-        +'Kõige rohkem kuulad: '+stiil;
+        +'Kõige rohkem kuulad: '+stiil+'<br>'
+        +'Sinu arvamus: '+arvamus;
 
     vastus4.style.backgroundColor="yellow";
 }
@@ -127,10 +140,12 @@ function puhasta(){
     let vastus3=document.getElementById("vastus3");
     let vastus4=document.getElementById("vastus4");
     let vastus5=document.getElementById("vastus5");
+    let vastus6=document.getElementById("vastus6");
 
     vastus.innerHTML="";
     vastus2.innerHTML="";
     vastus3.innerHTML="";
     vastus4.innerHTML="";
     vastus5.innerHTML="";
+    vastus6.innerHTML="";
 }

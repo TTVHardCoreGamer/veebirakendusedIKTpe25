@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
     <script src="../js/muusikaScript.js"></script>
+    <link rel="stylesheet" href="muusikaStyle.css">
+
 </head>
 
 <body>
@@ -42,6 +44,10 @@
 
                 <input type="radio" name="raadio" id="ei" value="ei" onclick="raadioValik()">
                 <label for="ei">ei</label>
+
+                <br><br>
+
+                <img id="raadioPilt" src="" alt="" width="150">
             </td>
 
             <td>
@@ -113,6 +119,22 @@
 
             <td>
                 <div id="vastus5"></div>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+            </td>
+
+            <td>
+                <textarea id="arvamus" rows="4" cols="30" oninput="arvamuseValik()" style="resize: none;"></textarea>
+
+            </td>
+
+            <td>
+                <div id="vastus6"></div>
             </td>
         </tr>
 

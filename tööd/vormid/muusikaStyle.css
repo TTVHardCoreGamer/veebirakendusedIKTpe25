@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    background-color: #eeeeff;
+}
+
+h1 {
+    color: darkblue;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+input[type="button"],
+input[type="reset"] {
+    padding: 7px 12px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: blue;
+}
+
+tr:hover {
+    background-color: #eeeeff;
+}
+
+#vastus4 {
+    padding: 8px;
+    background-color: lightyellow;
+}
+
