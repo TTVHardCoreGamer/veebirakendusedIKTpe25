@@ -23,14 +23,14 @@ footer{
     border-radius: 60px 0 0 0;
 }
 section#osa1{
-    padding: 10%;
+    padding: 1%;
     border-right:   9px groove orange;
     border-bottom: 9px dotted orange;
     margin: 10px;
     width: 25%;
 }
 section#osa2{
-    padding: 5%;
+    padding: 1%;
     border-left:  7px outset pink;
     border-right:  7px outset pink;
     margin: 5px;
@@ -56,7 +56,7 @@ section#osa5{
      width: 15%;
  }
 img#erapilt{
-    width: 100%;
+    width: 100px;
     border-radius: 50%;
     border: 10px solid lightblue;
 }

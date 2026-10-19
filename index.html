@@ -4,6 +4,7 @@
 <head> <!--tehniline info-->
     <meta charset="UTF-8">
     <title>Aaron veebirakenduste aluste tööd</title>
+    <script src="tööd/js/kuupaevaFunktsioonid.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -48,6 +49,12 @@
     <section id="osa2">
         <h2>Päevapilt</h2>
         <img src="Pilt.png" alt="ilus pilt" id="erapilt">
+        <br>
+        <input type="button" value="TÄNA ON" onclick="tanaOn()">
+        <div id="vastus"></div>
+        <br>
+        <input type="button" value="Sünnipäevani" onclick="synnipaevani()">
+        <div id="vastus2"></div>
 
     </section>
 </main>
