@@ -76,4 +76,3 @@ const leiaUnikaalsedNimed = nimed => {
 };
 
 console.log(leiaUnikaalsedNimed(["Kati", "Mati", "Kati", "Mari", "Mati", "Jüri"]));
-// ["Kati", "Mati", "Mari", "Jüri"]
