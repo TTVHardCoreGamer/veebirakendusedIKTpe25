@@ -10,7 +10,7 @@ minuNimi2();
 
 // 2. Argumendiga funktsioon
 function kuupaevEesti(kuupaev) {
-    const osad = kuupaev.split("."); // "19.07.25" -> ["19", "07", "25"]
+    const osad = kuupaev.split(".");
     const kuud = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni",
         "juuli", "august", "september", "oktoober", "november", "detsember"];
 
@@ -60,7 +60,7 @@ const salajaneSonum = sonum => {
     return salajane;
 };
 
-console.log(salajaneSonum("Tere maailm")); // T*r* m**l*m
+console.log(salajaneSonum("Tere maailm"));
 
 
 // 5. Unikaalsed nimed
