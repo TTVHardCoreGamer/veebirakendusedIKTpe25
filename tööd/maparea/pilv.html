@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutatud map area käsud</h1>
+<h2>palun kliki hiirega pildi erineva alale </h2>
+<img src="maja.png" alt="ilus majake" usemap="#majakaart">
+<!-- kasutame map'i (kaart) -->
+<map name="majakaart">
+    <!-- ring -circle coords=x, y, R-->
+    <area shape="circle" coords="244,296,34" href="aken.html" alt="aken">
+    <!-- ristkülik  rect coords=x, y, x1, y2-->
+    <area shape="rect" coords="235,45,258,110" href="korsten.html" alt="hall korsten">
+    <!-- mitu nurga polügoon -poly coords=x,y, x1, y1, x2, y2-kolmnurk-->
+    <area shape="poly" coords="75,185,183,40,308,185" href="katus.html" alt="katus">
+    <!-- uued alad: päike (ring), pilv (ristkülik), lind (polügoon) -->
+    <area shape="circle" coords="358,70,52" href="paike.html" alt="päike">
+    <area shape="rect" coords="22,15,150,72" href="pilv.html" alt="pilv">
+    <area shape="poly" coords="17,133,30,122,42,115,46,95,55,88,68,90,76,104,92,108,101,112,98,125,82,130,72,135,70,144,58,144,52,132,35,137" href="lind.html" alt="lind">
+</map>
+<div id="selgitus">
+    Pilv on õhus hõljuv väikestest veepiiskadest või jääkristallidest koosnev kogum. Pilvedest tuleb vihm ja lumi, seega on need veeringe tähtis osa. Joonistusel on pilv valge ja kohev ning ujub rahulikult taevas.
+</div>
+
+</body>
+</html>
