@@ -145,3 +145,11 @@ function korvad() {
         t.strokeRect(235, 175, 15, 45);
     }
 }
+function terveNagu(){
+    pea();
+    korvad();
+    vasaksilm();
+    paremsilm();
+    nina();
+    suu();
+}
