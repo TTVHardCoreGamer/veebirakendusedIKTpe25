@@ -28,6 +28,9 @@ section#osa1{
     border-bottom: 9px dotted orange;
     margin: 10px;
     width: 25%;
+    position: relative;
+    left: 0;
+    background-color: cyan;
 }
 section#osa2{
     padding: 1%;
