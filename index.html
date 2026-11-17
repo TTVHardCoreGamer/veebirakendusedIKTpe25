@@ -27,8 +27,18 @@
                 $('#paremale').show();
             });
         });
+
+        function koordLugemine(event, ui){
+            let koht=ui.offset;
+            $('#koordinadid').html('x:'+koht.left+ ' || y'+koht.top)
+        }
+        function leheStart(){
+            $('#erapilt').draggable();
+            $('#erapilt').bind("drag", koordLugemine);
+        }
     </script>
 </head>
+<body onload="leheStart()">
 <body>
 <!--veebilehe sisu, mis näeb kasutaja-->
 <!--päis-->
@@ -84,6 +94,7 @@
         <input type="button" value="Sünnipäevani" onclick="synnipaevani()">
         <div id="vastus2"></div>
     </section>
+    <div id="koordinadid"></div>
 </main>
 <!--jalus-->
 <footer>

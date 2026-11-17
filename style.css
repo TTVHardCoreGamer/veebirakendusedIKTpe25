@@ -60,8 +60,15 @@ section#osa5{
  }
 img#erapilt{
     width: 100px;
+    position: relative;
+    left: 0;
     border-radius: 50%;
     border: 10px solid lightblue;
+}
+img#pilt{
+    width: 100px;
+    position: relative;
+    left: 0;
 }
 /*navigeerimis menüü*/
 ul {
