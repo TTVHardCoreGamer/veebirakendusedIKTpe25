@@ -40,3 +40,35 @@ tr:hover {
     border: 2px solid green;
     border-radius: 10px;
 }
+
+.viga {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 6px;
+    display: none;
+}
+
+tr.veaRida {
+    background-color: #ffe0e0;
+}
+
+tr.veaRida:hover {
+    background-color: #ffcccc;
+}
+
+input.veaVali,
+textarea.veaVali {
+    border: 2px solid red;
+    background-color: #fff5f5;
+}
+
+#edukas {
+    display: none;
+    padding: 10px;
+    color: darkgreen;
+    font-weight: bold;
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-radius: 10px;
+}

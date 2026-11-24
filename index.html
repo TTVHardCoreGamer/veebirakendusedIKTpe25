@@ -14,23 +14,54 @@
     <link rel="stylesheet" href="style.css">
     <script>
         $(document).ready(function () {
+            // vasaku nupp on alguses peidus
+            $('#vasakule').hide();
+
             // paremale nuppu vajutamine
             $('#paremale').click(function () {
-                $('#osa1').animate({left: '200px'}, 1000)
+                $('#osa1').animate({left: '200px'}, 1000);
                 $(this).hide();
                 $('#vasakule').show();
             });
             // vasaku nuppu vajutamine
             $('#vasakule').click(function () {
-                $('#osa1').animate({left: '0px'}, 1000)
+                $('#osa1').animate({left: '0px'}, 1000);
                 $(this).hide();
                 $('#paremale').show();
+            });
+
+            // ---------- UUED jQuery EFEKTID (tunnis ei olnud) ----------
+            // juhendi loend on alguses peidus
+            $('#juhendiList').hide();
+
+            // slideDown, slideUp ja slideToggle
+            $('#juhendNaita').click(function () { $('#juhendiList').slideDown(500); });
+            $('#juhendPeida').click(function () { $('#juhendiList').slideUp(500); });
+            $('#juhendPealkiri').click(function () { $('#juhendiList').slideToggle(500); });
+
+            // rea värv muutub hiirega peale minnes (animate + mouseenter/mouseleave)
+            $('#juhendiList li').mouseenter(function () {
+                $(this).animate({color: '#c0392b'}, 300);
+            });
+            $('#juhendiList li').mouseleave(function () {
+                $(this).animate({color: '#000000'}, 300);
+            });
+
+            // pildi peitmine ja kuvamine (fadeOut, fadeIn)
+            $('#pildiPeida').click(function () { $('#erapilt').fadeOut(800); });
+            $('#pildiKuva').click(function () { $('#erapilt').fadeIn(800); });
+
+            // teksti suuruse muutmine (animate)
+            let tekstSuur = false;
+            $('#tekstSuur').click(function () {
+                tekstSuur = !tekstSuur;
+                $('#osa1 p').animate({fontSize: tekstSuur ? '24px' : '16px'}, 600);
             });
         });
 
         function koordLugemine(event, ui){
             let koht=ui.offset;
-            $('#koordinadid').html('x:'+koht.left+ ' || y'+koht.top)
+            $('#koordinadid').html('x: '+koht.left+ ' || y: '+koht.top)
         }
         function leheStart(){
             $('#erapilt').draggable();
@@ -39,7 +70,6 @@
     </script>
 </head>
 <body onload="leheStart()">
-<body>
 <!--veebilehe sisu, mis näeb kasutaja-->
 <!--päis-->
 <header>
@@ -70,13 +100,13 @@
 <!--sisu-->
 <main>
     <section id="osa1">
-      <h2>Tere tulemast!</h2>
+        <h2>Tere tulemast!</h2>
         <p>See on veebirakenduste tunnis
             käsitsi kirjutatud leht!</p>
         <br>
         <br>
         <p>Palun kasuta navigeerimismenüü, et leida info!</p>
-        </section>
+    </section>
     <input type="button" value="paremale" id="paremale">
     <input type="button" value="vasakule" id="vasakule">
     <input type="button" value="peida teksti"
@@ -88,6 +118,10 @@
         <h2>Päevapilt</h2>
         <img src="Pilt.png" alt="ilus pilt" id="erapilt">
         <br>
+        <input type="button" value="Peida pilt" id="pildiPeida">
+        <input type="button" value="Kuva pilt" id="pildiKuva">
+        <input type="button" value="Muuda teksti suurust" id="tekstSuur">
+        <br>
         <input type="button" value="TÄNA ON" onclick="tanaOn()">
         <div id="vastus"></div>
         <br>
@@ -95,6 +129,26 @@
         <div id="vastus2"></div>
     </section>
     <div id="koordinadid"></div>
+
+    <!--jQuery kasutusjuhend-->
+    <section id="juhend">
+        <h2 id="juhendPealkiri">🧪 Kuidas jQuery efekte proovida?</h2>
+        <p id="vihje">Vajuta pealkirjale või nuppudele, et sammud lahti ja kinni libistada.</p>
+
+        <div id="juhendNupud">
+            <input type="button" value="Ava sammud" id="juhendNaita">
+            <input type="button" value="Sulge sammud" id="juhendPeida">
+        </div>
+
+        <ol id="juhendiList">
+            <li><b>Teksti värv:</b> vii hiir selle sammude rea peale ja tekst läheb punaseks <i>(animate, mouseenter, mouseleave)</i></li>
+            <li><b>Liikumine:</b> vajuta nuppu "paremale" või "vasakule" ja tervituse kast liigub <i>(animate)</i></li>
+            <li><b>Sammude peitmine:</b> klõpsa selle kasti pealkirjal <i>(slideToggle)</i></li>
+            <li><b>Pilt:</b> vajuta "Peida pilt" või "Kuva pilt" päevapildi all <i>(fadeOut, fadeIn)</i></li>
+            <li><b>Teksti suurus:</b> vajuta "Muuda teksti suurust" ja tervituse tekst suureneb või väheneb <i>(animate)</i></li>
+            <li><b>Lohistamine:</b> haara päevapildist hiirega kinni ja lohista, koordinaadid kuvatakse all <i>(draggable)</i></li>
+        </ol>
+    </section>
 </main>
 <!--jalus-->
 <footer>
@@ -102,6 +156,3 @@
         Aaron Võrk
     </div>
 </footer>
-
-
-

@@ -53,11 +53,11 @@ section#osa4{
     width: 15%;
 }
 section#osa5{
-     padding: 5%;
-     border-left: 5px dotted dodgerblue;
-     margin: 5px;
-     width: 15%;
- }
+    padding: 5%;
+    border-left: 5px dotted dodgerblue;
+    margin: 5px;
+    width: 15%;
+}
 img#erapilt{
     width: 100px;
     position: relative;
@@ -112,4 +112,74 @@ nav ul li a:hover {
 }
 #kaart{
 
+}
+
+#juhend{
+    width: 650px;
+    max-width: 90%;
+    margin: 30px 0 30px 5%;
+    padding: 25px 30px;
+    border: 4px solid darkblue;
+    border-left: 12px solid darkblue;
+    border-radius: 0 50px 0 50px;
+    background-color: #eaf6fb;
+    box-shadow: 6px 6px 0 lightblue;
+}
+#juhend h2{
+    margin-top: 0;
+    color: darkblue;
+    cursor: pointer;
+}
+#juhend h2:hover{
+    color: dodgerblue;
+}
+#vihje{
+    font-style: italic;
+    color: dimgray;
+}
+#juhendNupud input[type="button"]{
+    padding: 8px 18px;
+    margin-right: 10px;
+    border: 2px solid darkblue;
+    border-radius: 20px;
+    background-color: lightblue;
+    color: darkblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+#juhendNupud input[type="button"]:hover{
+    background-color: darkblue;
+    color: white;
+}
+#juhendiList{
+    list-style: none;
+    counter-reset: samm;
+    padding: 0;
+    margin-top: 15px;
+    background-color: transparent;
+}
+#juhendiList li{
+    counter-increment: samm;
+    position: relative;
+    margin: 10px 0;
+    padding: 10px 10px 10px 50px;
+    border-bottom: 2px dotted lightblue;
+}
+#juhendiList li::before{
+    content: counter(samm);
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+#juhendiList li i{
+    font-size: 12px;
+    color: gray;
 }

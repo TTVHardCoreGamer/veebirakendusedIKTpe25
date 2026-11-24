@@ -149,3 +149,80 @@ function puhasta(){
     vastus5.innerHTML="";
     vastus6.innerHTML="";
 }
+
+$(document).ready(function () {
+
+    $('#ankeet').submit(function (e) {
+        e.preventDefault();
+        $('#edukas').hide();
+
+        if (valideeri()) {
+            $('#edukas').text('Aitäh! Ankeet on täidetud ja valmis saatmiseks.').fadeIn(400);
+        }
+    });
+
+    $('#ankeet input, #ankeet textarea').on('input change', function () {
+        peidaViga($(this).closest('tr'));
+    });
+
+    $('#ankeet').on('reset', function () {
+        $('.viga').hide().text('');
+        $('tr').removeClass('veaRida');
+        $('.veaVali').removeClass('veaVali');
+        $('#edukas').hide();
+    });
+});
+
+function naitaViga(rida, tekst) {
+    rida.addClass('veaRida');
+    rida.find('.viga').text(tekst).fadeIn(300);
+}
+
+function peidaViga(rida) {
+    rida.removeClass('veaRida');
+    rida.find('.veaVali').removeClass('veaVali');
+    rida.find('.viga').hide();
+}
+
+function valideeri() {
+    let korras = true;
+    let esimeneViga = null;
+
+    function viga(valjaSelektor, tekst) {
+        let vali = $(valjaSelektor).first();
+        naitaViga(vali.closest('tr'), tekst);
+        if (vali.is('input[type=text], textarea')) {
+            vali.addClass('veaVali');
+        }
+        if (esimeneViga === null) {
+            esimeneViga = vali;
+        }
+        korras = false;
+    }
+
+    if ($.trim($('#nimi').val()) === '') {
+        viga('#nimi', 'Palun sisesta oma nimi!');
+    }
+
+    if ($('input[name="raadio"]:checked').length === 0) {
+        viga('input[name="raadio"]', 'Palun vali, kas kuulad raadiot (jah/ei)!');
+    }
+
+    if ($('input[name="muusik"]:checked').length === 0) {
+        viga('input[name="muusik"]', 'Palun vali vähemalt üks muusik!');
+    }
+
+    if ($('input[name="stiil"]:checked').length === 0) {
+        viga('input[name="stiil"]', 'Palun vali üks muusikastiil!');
+    }
+
+    if ($.trim($('#arvamus').val()) === '') {
+        viga('#arvamus', 'Palun kirjuta oma arvamus!');
+    }
+
+    if (esimeneViga !== null) {
+        esimeneViga.focus();
+    }
+
+    return korras;
+}

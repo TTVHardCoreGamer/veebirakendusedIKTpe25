@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
     <script src="../js/muusikaScript.js"></script>
     <link rel="stylesheet" href="muusikaStyle.css">
 </head>
@@ -12,9 +15,22 @@
 
 <h1>Muusika küsimustik</h1>
 
-<form action="#">
+<form action="#" id="ankeet">
 
     <table border="1">
+
+        <tr>
+            <td>
+                <label for="nimi">Sinu nimi:</label>
+            </td>
+
+            <td>
+                <input type="text" id="nimi" name="nimi">
+                <div class="viga"></div>
+            </td>
+
+            <td></td>
+        </tr>
 
         <tr>
             <td>
@@ -47,6 +63,7 @@
                 <br><br>
 
                 <img id="raadioPilt" src="" alt="" width="150">
+                <div class="viga"></div>
             </td>
 
             <td>
@@ -72,6 +89,7 @@
 
                 <input type="checkbox" name="muusik" id="tommy" value="Tommy Cash" onchange="muusikValik()">
                 <label for="tommy">Tommy Cash</label>
+                <div class="viga"></div>
             </td>
 
             <td>
@@ -112,6 +130,7 @@
 
                 <input type="radio" name="stiil" id="elektrooniline" value="Elektrooniline" onclick="stiiliValik()">
                 <label for="elektrooniline">Elektrooniline</label>
+                <div class="viga"></div>
             </td>
 
             <td>
@@ -126,6 +145,7 @@
 
             <td>
                 <textarea id="arvamus" rows="4" cols="30" oninput="arvamuseValik()"></textarea>
+                <div class="viga"></div>
             </td>
 
             <td>
@@ -144,6 +164,16 @@
 
             <td>
                 <div id="vastus4"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" value="Saada" id="saada">
+            </td>
+
+            <td colspan="2">
+                <div id="edukas"></div>
             </td>
         </tr>
 
